@@ -13,12 +13,7 @@ public class PaymentsPage extends BasePage {
     @FindBy(id = "first_name") WebElement firstName;
     @FindBy(id = "last_name") WebElement lastName;
     @FindBy(id = "email") WebElement email;
-    @FindBy(css = ".options-h.enabled.three-per-line > li | #submethod-visa") WebElement visa;
-
-    public WebElement getFrame() {
-        return frame;
-    }
-
+    @FindBy(css = ".options-h.enabled.three-per-line > li | #submethod-visa")WebElement visa;
     @FindBy(id = "adyen-iframe") WebElement frame;
     @FindBy(css = ".fieldDiv > input") WebElement cardNumberField;
     @FindBy(xpath = "//*[@id='card.expiryMonth']") WebElement expiryMonthDropdown;
@@ -51,17 +46,8 @@ public class PaymentsPage extends BasePage {
         setElementText(cvcField, "123");
     }
 
-//        public void populateCardInfo() throws InterruptedException {
-//            System.out.println("123");
-//            Thread.sleep(5000);
-//            Actions actions = new Actions(driver);
-//            actions.moveToElement(cardNumberField).click().build().perform();
-//            System.out.println("456");
-//    }
 
-
-
-    public void clickPayBtn(){
+    public void clickPayBtn() {
         click(payBtn);
     }
 
@@ -69,7 +55,9 @@ public class PaymentsPage extends BasePage {
         return validationError;
     }
 
-
+    public WebElement getFrame() {
+        return frame;
+    }
 
 
 }

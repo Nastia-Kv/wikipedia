@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends BasePage {
 
-    public HomePage(WebDriver driver){
+    public HomePage(WebDriver driver) {
         super(driver);
         this.pageUrl = "https://en.wikipedia.org/wiki/Main_Page";
         this.pageTitle = "Wikipedia, the free encyclopedia";
@@ -14,11 +14,11 @@ public class HomePage extends BasePage {
 
     @FindBy(css = "#n-sitesupport") WebElement donateToWikipediaLink;
 
-    public void loadWikiPage(){
+    public void loadWikiPage() {
         loadPage();
     }
 
-    public void clickDonateToWikiLink(){
+    public void clickDonateToWikiLink() {
         click(donateToWikipediaLink);
     }
 
